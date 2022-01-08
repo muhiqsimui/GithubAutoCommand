@@ -101,9 +101,15 @@ def menu_utama():
             print('MAINTENANCE')
         elif(pil == 9):
             waktu = int(input('Always push every ? minutes : \n'))
+            commitMsg = "\""+str(input("write commit message : "))+"\""
             while True:
+                run(cmd('add'))
+                time.sleep(1)
+                run(cmd('commit') + commitMsg)
+                time.sleep(3)
                 run(cmd('push'))
-                print('Press ctrl-C to exit')
+                print(
+                    f'This Command always run every {waktu} minutes \nPress ctrl-C to exit')
                 time.sleep(waktu*60)
 
         elif(pil == 0):
