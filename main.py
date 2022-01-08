@@ -24,20 +24,6 @@ def run(command):
     time.sleep(1)
     os.system(command)
 
-# print(cmd('commit'))
-
-# untuk mengambil data sensitif
-# a = os.getenv('TOKEN')
-
-# akses command prompt
-# os.system('ipconfig')
-
-# cek apakah ada file yg dibutuhkan
-# cek = os.path.exists('.env')
-# print(cek)
-
-# Author https://github.com/muhiqsimui
-
 
 def cek_git():
     cekGit = os.path.exists('.git')
@@ -80,6 +66,7 @@ def menu_utama():
     6. git remote
     7. git fetch (MAINTENANCE)
     8. git rollback (MAINTENANCE)
+    9. auto push github on minutes
 
     0. exit
     '''+(garis*"~")
@@ -96,7 +83,7 @@ def menu_utama():
             # XCOMAND
             run(cmd('add'))
         elif(pil == 3):
-            msg = str(input("write commit message : "))
+            msg = "\""+str(input("write commit message : "))+"\""
             # XCOMAND
             run(cmd('commit') + msg)
         elif(pil == 4):
@@ -112,6 +99,13 @@ def menu_utama():
             print('MAINTENANCE')
         elif(pil == 8):
             print('MAINTENANCE')
+        elif(pil == 9):
+            waktu = int(input('Always push every ? minutes : \n'))
+            while True:
+                run(cmd('push'))
+                print('Press ctrl-C to exit')
+                time.sleep(waktu*60)
+
         elif(pil == 0):
             print('Thank you for use dont forget to follow github/muhiqsimui')
             exit()
@@ -121,3 +115,6 @@ def menu_utama():
 
 cek_git()
 menu_utama()
+
+
+# Author github link https://github.com/muhiqsimui/GithubAutoCommand
