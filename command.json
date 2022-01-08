@@ -1,0 +1,30 @@
+[
+    {
+        "name": "init",
+        "command": "git init"
+    },
+    {
+        "name": "add",
+        "command": "git add ."
+    },
+    {
+        "name": "status",
+        "command": "git status"
+    },
+    {
+        "name": "branch",
+        "command": "git branch -M main"
+    },
+    {
+        "name": "commit",
+        "command": "git commit -m "
+    },
+    {
+        "name": "remote",
+        "command": "git remote add origin "
+    },
+    {
+        "name": "push",
+        "command": "git push -f origin main"
+    }
+]
