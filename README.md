@@ -2,7 +2,7 @@
 <hr>
 <p>This script contains a menu that will make it easier for users to perform various github commands</p>
 
-<img src="img/menu.png"></img>
+<img src="img/menu.jpg"></img>
 
 <h2>how to use</h2>
 <hr>
